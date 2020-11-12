@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h2>Spam Detector for SMS Messages</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: left;"><b>Results for Message entered:-</b></p>
+	<div class="results">
+		
+	{% if prediction == 1%}
+	<p style="color:red;"><b>Spam Message Detected<b></p>
+	{% elif prediction == 0%}
+	<p style="color:green;"><b>Not a Spam Message</p>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
